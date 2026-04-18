@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import yfinance as yf
 import pandas as pd
 
-from prediction.stock_prediction import train_stock_model, predict_next_day
+from stock_market_sentiment_project.prediction.stock_prediction import train_stock_model, predict_next_day
 from sentiment.sentiment_analysis import analyze_sentiment_from_dataset
 from visualization.charts import stock_price_chart, sentiment_chart
 
