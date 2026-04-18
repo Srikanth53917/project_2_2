@@ -1,10 +1,32 @@
+# Flask
 from flask import Flask, render_template, request
-import yfinance as yf
-import pandas as pd
 
-from stock_market_sentiment_project.prediction.stock_prediction import train_stock_model, predict_next_day
-from sentiment.sentiment_analysis import analyze_sentiment_from_dataset
-from visualization.charts import stock_price_chart, sentiment_chart
+# Data handling
+import pandas as pd
+import numpy as np
+
+# Stock data
+import yfinance as yf
+
+# Visualization
+import matplotlib.pyplot as plt
+
+# Machine Learning / Prediction
+from stock_market_sentiment_project.prediction.stock_prediction import (
+    train_stock_model,
+    predict_next_day
+)
+
+# Sentiment Analysis
+from stock_market_sentiment_project.sentiment.sentiment_analysis import (
+    analyze_sentiment_from_dataset
+)
+
+# Charts / Visualization
+from stock_market_sentiment_project.visualization.charts import (
+    plot_stock_chart,
+    plot_sentiment_chart
+)
 
 app = Flask(__name__)
 
